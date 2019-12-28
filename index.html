@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg"></script>
     <script type="text/javascript" src="main.js"></script>
 
@@ -45,27 +46,47 @@
             <!-- Input Box -->
             <div class="input-box">
               <form class="" action="index.html" method="post">
+                <div class="location-box">
+                  <label for="location">Engagement Location:</label><br>
+                  <input id="autocomplete" type="text" name="location" value="">
+                  <div id="controls">
+                  <select id="country">
+                    <option value="all">All</option>
+                    <option value="au">Australia</option>
+                    <option value="br">Brazil</option>
+                    <option value="ca">Canada</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="mx">Mexico</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="it">Italy</option>
+                    <option value="za">South Africa</option>
+                    <option value="es">Spain</option>
+                    <option value="pt">Portugal</option>
+                    <option value="us" selected>U.S.A.</option>
+                    <option value="uk">United Kingdom</option>
+                  </select>
+                </div>
+                </div>
+
                 <div class="name-1-box">
-                  <label for="name-1">Name 1:</label><br>
+                  <label for="name-1">Your Name:</label><br>
                   <input type="text" name="name-1" id="name_1_id" value="">
                 </div>
 
                 <div class="name-2-box">
-                  <label for="name-2">Name 2:</label><br>
+                  <label for="name-2">Your Partners Name:</label><br>
                   <input type="text" name="name-2" id="name_2_id" value="">
                 </div>
 
                 <div class="date-box">
-                  <label for="date">Date:</label><br>
+                  <label for="date">Engagement Date:</label><br>
                   <input type="date" name="date" value="">
                 </div>
-
-                <div class="location-box">
-                  <label for="location">Location:</label><br>
-                  <input type="text" name="location" value="">
-                </div>
+                <button id="btn-generate" type="button" name="button" onclick="updater()">Generate Design</button>
+                <button id="btn-checkout" type="button" name="button" onclick="">Checkout</button>
               </form>
-              <input type="button" name="" value="" onclick="updater()">
+
             </div>
             <!-- Input Box -->
 
@@ -73,5 +94,9 @@
         </div>
       </div>
     </main>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places&callback=initMap"
+        async defer></script>
   </body>
 </html>
+
+<!-- AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg -->

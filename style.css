@@ -1,17 +1,18 @@
 html {
-  background-color: grey;
+  background-color: #414654;
 }
 .container {
   overflow: auto;
   margin: 30px 100px;
-  background-color: #c2d6d6;
-  border: 5px solid white;
+  background-color: #414654;
+  /*border: 5px solid white;*/
   position: relative;
 }
 
 img {
-  border: 5px solid;
-  height: 550px;
+  border: 25px solid white;
+  border-radius: 5px;
+  height: 480px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-right: 40px;
@@ -21,10 +22,10 @@ img {
 }
 
 #map {
-    width: 375px;
-    height: 550px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 355px;
+    height: 520px;
+    margin-top: 30px;
+    margin-bottom: 0px;
     margin-right: 40px;
     position: absolute;
     right: 0;
@@ -38,19 +39,27 @@ img {
 }
 
   .name-1-box, .name-2-box, .date-box, .location-box {
-    height: 100px;
-    background-color: white;
+    height: 90px;
+    background-color: #C0C0C0;
     width: 75%;
-    margin: 40px;
+    margin: 20px;
     border-radius: 5px;
   }
 
   .name-1-box input, .name-2-box input, .date-box input, .location-box input{
     width: 75%;
-    height: 30px;
+    height: 40px;
     margin-top: 10px;
+    margin-left:  10px;
+    border-radius: 5px;
+    border: white;
+    font-size: 20px;
   }
 
+label {
+  padding: 10px;
+  padding-top: 50px;
+}
 /* Input Boxes */
 
 /* Names */
@@ -84,3 +93,24 @@ img {
     right: 180px;
   }
 /* Date */
+#btn-generate {
+  height: 50px;
+  background-color: #418BA6;
+  border-color: #418BA6;
+  border-radius: 5px;
+  width: 75%;
+  margin-top: 0px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#btn-checkout {
+  height: 50px;
+  background-color: #267496;
+  border-color: #267496;
+  border-radius: 5px;
+  width: 75%;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}

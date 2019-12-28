@@ -1,36 +1,3 @@
-google.maps.event.addDomListener(window, 'load', init);
-
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 11,
-
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
-    };
-
-    // Get the HTML DOM element that will contain your map
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
-
-    // Create the Google Map using our element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-
-    // Let's also add a marker while we're at it
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
-        map: map,
-        title: 'Snazzy!'
-    });
-
-}
-
 function updater() {
   var name_1 = document.getElementById("name_1_id").value;
   var name_2 = document.getElementById("name_2_id").value;
@@ -38,3 +5,121 @@ function updater() {
   document.getElementById("name-1").innerHTML = name_1;
   document.getElementById("name-2").innerHTML = name_2;
 }
+
+// This example uses the autocomplete feature of the Google Places API.
+      // It allows the user to find all hotels in a given place, within a given
+      // country. It then displays markers for all the hotels returned,
+      // with on-click details for each hotel.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map, places, infoWindow;
+      var markers = [];
+      var autocomplete;
+      var countryRestrict = {'country': 'us'};
+      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+      var hostnameRegexp = new RegExp('^https?://.+?/');
+
+      var countries = {
+        'au': {
+          center: {lat: -25.3, lng: 133.8},
+          zoom: 4
+        },
+        'br': {
+          center: {lat: -14.2, lng: -51.9},
+          zoom: 3
+        },
+        'ca': {
+          center: {lat: 62, lng: -110.0},
+          zoom: 3
+        },
+        'fr': {
+          center: {lat: 46.2, lng: 2.2},
+          zoom: 5
+        },
+        'de': {
+          center: {lat: 51.2, lng: 10.4},
+          zoom: 5
+        },
+        'mx': {
+          center: {lat: 23.6, lng: -102.5},
+          zoom: 4
+        },
+        'nz': {
+          center: {lat: -40.9, lng: 174.9},
+          zoom: 5
+        },
+        'it': {
+          center: {lat: 41.9, lng: 12.6},
+          zoom: 5
+        },
+        'za': {
+          center: {lat: -30.6, lng: 22.9},
+          zoom: 5
+        },
+        'es': {
+          center: {lat: 40.5, lng: -3.7},
+          zoom: 5
+        },
+        'pt': {
+          center: {lat: 39.4, lng: -8.2},
+          zoom: 6
+        },
+        'us': {
+          center: {lat: 37.1, lng: -95.7},
+          zoom: 3
+        },
+        'uk': {
+          center: {lat: 54.8, lng: -4.6},
+          zoom: 5
+        }
+      };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: countries['us'].zoom,
+          center: countries['us'].center,
+          mapTypeControl: false,
+          panControl: false,
+          zoomControl: false,
+          streetViewControl: false,
+
+          styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
+
+        });
+
+        infoWindow = new google.maps.InfoWindow({
+          content: document.getElementById('info-content')
+        });
+
+        // Create the autocomplete object and associate it with the UI input control.
+        // Restrict the search to the default country, and to place type "cities".
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */ (
+                document.getElementById('autocomplete')), {
+              types: ['(cities)'],
+              componentRestrictions: countryRestrict
+            });
+        places = new google.maps.places.PlacesService(map);
+
+        autocomplete.addListener('place_changed', onPlaceChanged);
+
+        // Add a DOM event listener to react when the user selects a country.
+        document.getElementById('country').addEventListener(
+            'change', setAutocompleteCountry);
+      }
+
+      // When the user selects a city, get the place details for the city and
+      // zoom the map in on the city.
+      function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(15);
+          search();
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
+        }
+      }
