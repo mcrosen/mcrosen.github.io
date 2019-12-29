@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg"></script>
-    <script type="text/javascript" src="main.js"></script>
 
-  </head>
-  <body>
-    <main>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-9">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg"></script>
+  <script type="text/javascript" src="main.js"></script>
 
-            <!-- Map -->
-            <div id="map"></div>
-            <!-- Map -->
+</head>
 
-            <!-- Image Box -->
-            <div class="img-box">
-              <img src="images/1x/Artboard 1.png" alt="">
-            </div>
-            <!-- Image Box -->
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <img id="logo" src="images/logo.png" alt="">
+          <!-- Input Box -->
+          <div class="input-box">
+            <form class="" action="index.html" method="post">
 
-            <!-- Names -->
-            <div id="name-1"></div>
-            <div id="name-2"></div>
-            <!-- Names -->
+              <div class="location-box">
+                <label for="location">Engagement Location:</label><br>
+                <input id="autocomplete" type="text" name="location" placeholder="Choose your location" value="">
+              </div>
 
-            <!-- Engaged In -->
-            <div id="static-eng-in"></div>
-            <div id="engaged-in"></div>
-            <!-- Engaged In -->
+              <div class="name-1-box">
+                <label for="name-1">First Name:</label><br>
+                <input type="text" name="name-1" id="name_1_id" placeholder="Jack" value="">
+              </div>
 
-            <!-- Date -->
-            <div id="date"></div>
-            <!-- Date -->
+              <div class="name-2-box">
+                <label for="name-2">Second Name:</label><br>
+                <input type="text" name="name-2" id="name_2_id" placeholder="Jill" value="">
+              </div>
 
+              <div class="date-box">
+                <label for="date">Engaged In:</label><br>
+                <input type="text" name="date" placeholder="New York" value="">
+              </div>
 
-          </div>
-          <div class="col-sm-3">
+              <div class="date-box">
+                <label for="date">Engagement Date:</label><br>
+                <input type="date" name="date" value="">
+              </div>
 
-            <!-- Input Box -->
-            <div class="input-box">
-              <form class="" action="index.html" method="post">
-                <div class="location-box">
-                  <label for="location">Engagement Location:</label><br>
-                  <input id="autocomplete" type="text" name="location" placeholder="Choose your location" value="">
-                </div>
+              <div class="date-box">
+                <label for="size">Poster Size:</label><br>
+                  <select class="poster-size" name="size">
+                    <option value="">8 x 10 inch</option>
+                    <option value="">12 x 18 inch</option>
+                    <option value="">16 x 24 inch</option>
+                  </select>
+              </div>
 
-                <div class="name-1-box">
-                  <label for="name-1">Your Name:</label><br>
-                  <input type="text" name="name-1" id="name_1_id" placeholder="John"value="">
-                </div>
-
-                <div class="name-2-box">
-                  <label for="name-2">Your Partners Name:</label><br>
-                  <input type="text" name="name-2" id="name_2_id" placeholder="Smith" value="">
-                </div>
-
-                <div class="date-box">
-                  <label for="date">Engaged In:</label><br>
-                  <input type="text" name="date" placeholder="New York"value="">
-                </div>
-
-                <div class="date-box">
-                  <label for="date">Engagement Date:</label><br>
-                  <input type="date" name="date" value="">
-                </div>
-                <button id="btn-generate" type="button" name="button" onclick="updater()"><strong>GENERATE</strong></button>
-                <button id="btn-checkout" type="button" name="button" onclick=""><strong>CHECKOUT</strong></button>
-              </form>
-
-            </div>
-            <!-- Input Box -->
-
+              <button id="btn-generate" type="button" name="button" onclick="updater()"><strong>GENERATE</strong></button>
+              <button id="btn-checkout" type="button" name="button" onclick=""><strong>CHECKOUT</strong></button>
+            </form>
           </div>
         </div>
+
+        <div class="col-md-8">
+
+          <!-- Map -->
+          <div id="map"></div>
+          <!-- Map -->
+
+          <!-- Image Box -->
+          <div class="img-box">
+            <img id="artboard" class="border-10" src="images/1x/Artboard 1.png" alt="">
+          </div>
+          <!-- Image Box -->
+
+          <!-- Names -->
+          <div id="name-1"></div>
+          <div id="name-2"></div>
+          <!-- Names -->
+
+          <!-- Engaged In -->
+          <div id="static-eng-in"></div>
+          <div id="engaged-in"></div>
+          <!-- Engaged In -->
+
+          <!-- Date -->
+          <div id="date"></div>
+          <!-- Date -->
+        </div>
+
       </div>
-    </main>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places&callback=initMap"
-        async defer></script>
-  </body>
+    </div>
+  </main>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places&callback=initMap" async defer></script>
+</body>
+
 </html>
 
 <!-- AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg -->

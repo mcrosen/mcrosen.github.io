@@ -1,7 +1,7 @@
 html {
   background-color: #414654;
 }
-.container {
+.container-fluid {
   overflow: auto;
   margin: 30px 100px;
   background-color: #414654;
@@ -11,24 +11,28 @@ html {
 
 
 img {
-  border: 25px solid white;
+  border-width: 10px !important;
   border-radius: 5px;
   height: 84%;
-  width: 30%;
+  width: 55%;
   margin-top: 20px;
   margin-bottom: 10px;
-  margin-right: 150px;
+  margin-right: 200px;
   right: 0;
   position: absolute;
   pointer-events: none;
 }
 
+.border-10 {
+  border: solid 20px white !important;
+}
+
 #map {
-    width: 30%;
-    height: 84%;
+    width: 55%;
+    height: 80%;
     margin-top: 30px;
     margin-bottom: 0px;
-    margin-right: 150px;
+    margin-right: 200px;
     position: absolute;
     right: 0;
   }
@@ -36,23 +40,22 @@ img {
 /* Input Boxes */
 
 .input-box {
-  overflow: auto;
-  width: 50%;
+  padding-top: 20px;
+  width: 100%;
 }
 
   .name-1-box, .name-2-box, .date-box, .location-box {
     height: 90px;
     background-color: #eaf1f8;
-    width: 60%;
+    width: 90%;
     margin: 20px;
     padding-top: 10px;
     border-radius: 5px;
   }
 
   .name-1-box input, .name-2-box input, .date-box input, .location-box input{
-    width: 75%;
+    width: 70%;
     height: 40px;
-    margin-top: 10px;
     margin-left:  10px;
     padding-left: 10px;
     border-radius: 5px;
@@ -61,8 +64,42 @@ img {
   }
 
 label {
-  padding: 10px;
-  padding-top: 50px;
+  padding-left: 12px;
+  font-family: sans-serif;
+}
+
+.poster-size {
+  height: 40px;
+  width: 70%;
+  margin-left:  10px;
+  padding-left: 10px;
+  border: none;
+}
+
+#btn-generate {
+  height: 50px;
+  background-color: #418BA6;
+  border-color: #418BA6;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 0px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#btn-checkout {
+  height: 50px;
+  background-color: #267496;
+  border-color: #267496;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 /* Input Boxes */
@@ -73,6 +110,7 @@ label {
     bottom: 125px;
     right: 250px;
     font-size: 22px;
+
   }
 
   #name-2 {
@@ -98,28 +136,11 @@ label {
     right: 180px;
   }
 /* Date */
-#btn-generate {
-  height: 50px;
-  background-color: #418BA6;
-  border-color: #418BA6;
-  color: white;
-  font-size: 14px;
-  border-radius: 5px;
-  width: 60%;
-  margin-top: 0px;
-  margin-left: 20px;
-  cursor: pointer;
-}
 
-#btn-checkout {
-  height: 50px;
-  background-color: #267496;
-  border-color: #267496;
-  color: white;
-  font-size: 14px;
-  border-radius: 5px;
-  width: 60%;
-  margin-top: 10px;
-  margin-left: 20px;
-  cursor: pointer;
+
+#logo {
+  margin-top: 0;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  height: 5%;
 }
