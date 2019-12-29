@@ -11,9 +11,9 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-6">
+          <div class="col-sm-9">
 
             <!-- Map -->
             <div id="map"></div>
@@ -31,60 +31,47 @@
             <!-- Names -->
 
             <!-- Engaged In -->
-            <div id="static-eng-in">Engaged In:</div>
+            <div id="static-eng-in"></div>
             <div id="engaged-in"></div>
             <!-- Engaged In -->
 
             <!-- Date -->
-            <div id="date">12th May 1999</div>
+            <div id="date"></div>
             <!-- Date -->
 
 
           </div>
-          <div class="col-6">
+          <div class="col-sm-3">
 
             <!-- Input Box -->
             <div class="input-box">
               <form class="" action="index.html" method="post">
                 <div class="location-box">
                   <label for="location">Engagement Location:</label><br>
-                  <input id="autocomplete" type="text" name="location" value="">
-                  <div id="controls">
-                  <select id="country">
-                    <option value="all">All</option>
-                    <option value="au">Australia</option>
-                    <option value="br">Brazil</option>
-                    <option value="ca">Canada</option>
-                    <option value="fr">France</option>
-                    <option value="de">Germany</option>
-                    <option value="mx">Mexico</option>
-                    <option value="nz">New Zealand</option>
-                    <option value="it">Italy</option>
-                    <option value="za">South Africa</option>
-                    <option value="es">Spain</option>
-                    <option value="pt">Portugal</option>
-                    <option value="us" selected>U.S.A.</option>
-                    <option value="uk">United Kingdom</option>
-                  </select>
-                </div>
+                  <input id="autocomplete" type="text" name="location" placeholder="Choose your location" value="">
                 </div>
 
                 <div class="name-1-box">
                   <label for="name-1">Your Name:</label><br>
-                  <input type="text" name="name-1" id="name_1_id" value="">
+                  <input type="text" name="name-1" id="name_1_id" placeholder="John"value="">
                 </div>
 
                 <div class="name-2-box">
                   <label for="name-2">Your Partners Name:</label><br>
-                  <input type="text" name="name-2" id="name_2_id" value="">
+                  <input type="text" name="name-2" id="name_2_id" placeholder="Smith" value="">
+                </div>
+
+                <div class="date-box">
+                  <label for="date">Engaged In:</label><br>
+                  <input type="text" name="date" placeholder="New York"value="">
                 </div>
 
                 <div class="date-box">
                   <label for="date">Engagement Date:</label><br>
                   <input type="date" name="date" value="">
                 </div>
-                <button id="btn-generate" type="button" name="button" onclick="updater()">Generate Design</button>
-                <button id="btn-checkout" type="button" name="button" onclick="">Checkout</button>
+                <button id="btn-generate" type="button" name="button" onclick="updater()"><strong>GENERATE</strong></button>
+                <button id="btn-checkout" type="button" name="button" onclick=""><strong>CHECKOUT</strong></button>
               </form>
 
             </div>

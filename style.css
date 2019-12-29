@@ -9,24 +9,26 @@ html {
   position: relative;
 }
 
+
 img {
   border: 25px solid white;
   border-radius: 5px;
-  height: 480px;
+  height: 80%;
+  width: 32%;
   margin-top: 20px;
   margin-bottom: 10px;
-  margin-right: 40px;
+  margin-right: 150px;
   right: 0;
   position: absolute;
   pointer-events: none;
 }
 
 #map {
-    width: 355px;
-    height: 520px;
+    width: 32%;
+    height: 80%;
     margin-top: 30px;
     margin-bottom: 0px;
-    margin-right: 40px;
+    margin-right: 150px;
     position: absolute;
     right: 0;
   }
@@ -40,9 +42,10 @@ img {
 
   .name-1-box, .name-2-box, .date-box, .location-box {
     height: 90px;
-    background-color: #C0C0C0;
-    width: 75%;
+    background-color: #eaf1f8;
+    width: 60%;
     margin: 20px;
+    padding-top: 10px;
     border-radius: 5px;
   }
 
@@ -51,15 +54,17 @@ img {
     height: 40px;
     margin-top: 10px;
     margin-left:  10px;
+    padding-left: 10px;
     border-radius: 5px;
     border: white;
-    font-size: 20px;
+    font-size: 16px;
   }
 
 label {
   padding: 10px;
   padding-top: 50px;
 }
+
 /* Input Boxes */
 
 /* Names */
@@ -97,8 +102,10 @@ label {
   height: 50px;
   background-color: #418BA6;
   border-color: #418BA6;
+  color: white;
+  font-size: 14px;
   border-radius: 5px;
-  width: 75%;
+  width: 60%;
   margin-top: 0px;
   margin-left: 20px;
   cursor: pointer;
@@ -108,8 +115,10 @@ label {
   height: 50px;
   background-color: #267496;
   border-color: #267496;
+  color: white;
+  font-size: 14px;
   border-radius: 5px;
-  width: 75%;
+  width: 60%;
   margin-top: 10px;
   margin-left: 20px;
   cursor: pointer;
