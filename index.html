@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places"></script>
@@ -50,9 +54,9 @@
               <div class="date-box">
                 <label for="size">Poster Size:</label><br>
                   <select class="poster-size" name="size">
-                    <option value="">8 x 10 inch</option>
-                    <option value="">12 x 18 inch</option>
-                    <option value="">16 x 24 inch</option>
+                    <option value="8">8 x 10 inch</option>
+                    <option value="12">12 x 18 inch</option>
+                    <option value="16">16 x 24 inch</option>
                   </select>
               </div>
 
@@ -65,18 +69,20 @@
         <div class="col-md-8">
 
           <!-- Map -->
+          
           <div id="map"></div>
           <!-- Map -->
 
           <!-- Image Box -->
           <div class="img-box">
             <img id="artboard" class="border-10" src="images/1x/Artboard 1.png" alt="">
+            <div id="heart-icon" class="draggable"></div>
           </div>
           <!-- Image Box -->
 
           <!-- Names -->
-          <div id="name-1"></div>
-          <div id="name-2"></div>
+          <div id="name-1" class="draggable"></div>
+          <div id="name-2" class="draggable"></div>
           <!-- Names -->
 
           <!-- Engaged In -->

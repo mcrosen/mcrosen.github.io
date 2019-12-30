@@ -112,6 +112,7 @@ function updater() {
             });
         places = new google.maps.places.PlacesService(map);
 
+
         autocomplete.addListener('place_changed', onPlaceChanged);
 
         // Add a DOM event listener to react when the user selects a country.
@@ -131,3 +132,7 @@ function updater() {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
+
+      $( function() {
+    $( ".draggable" ).draggable();
+  } );
