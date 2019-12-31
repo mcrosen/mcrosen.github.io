@@ -108,7 +108,7 @@ function updater() {
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
               types: ['geocode'],
-              componentRestrictions: countryRestrict
+              
             });
         places = new google.maps.places.PlacesService(map);
 
