@@ -16,7 +16,8 @@ html,body {
 .location-box {
   height: 90px;
   background-color: #eaf1f8;
-  width: 86%;
+  border: 10px solid #eaf1f8;
+  width: 80%;
   height: 60px;
   border-radius: 5px;
   margin: 0 auto;
@@ -32,10 +33,11 @@ html,body {
 
 #autocomplete {
   display: inline-block;
-  height: 60%;
+  height: 70%;
   width: 90%;
   border: 1px solid white;
   border-radius: 5px;
+  top: 50%;
 }
 
 #map {
@@ -57,12 +59,12 @@ html,body {
 
 .btn-personalize {
   background-color: #58aed1;
-  width: 85%;
+  width: 80%;
   display: inline-block;
   height: 40px;
   margin-top: 10px;
   margin-bottom: 50px;
-  border: 1px solid #58aed1;
+  border: 10px solid #58aed1;
   border-radius: 5px;
 }
 
