@@ -37,7 +37,7 @@ html,body {
   width: 90%;
   border: 1px solid white;
   border-radius: 5px;
-  top: 50%;
+  top: 50% 50%;
 }
 
 #map {
