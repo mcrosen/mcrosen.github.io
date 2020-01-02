@@ -66,6 +66,8 @@ html,body {
   margin-bottom: 50px;
   border: 10px solid #58aed1;
   border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 /* Main Page */
@@ -85,6 +87,7 @@ html,body {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 20px;
+    font-weight: bold;
   }
 
   .name-1-box input, .name-2-box input, .date-box input, .location-box input{
@@ -95,6 +98,7 @@ html,body {
     font-size: 18px;
     margin-top: 10px;
     padding-left: 5%;
+    top: 50%;
   }
 
 label {
