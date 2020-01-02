@@ -99,7 +99,6 @@ html,body {
     font-size: 18px;
     margin-top: 10px;
     padding-left: 5%;
-    top: 50%;
   }
 
 label {
@@ -157,7 +156,7 @@ label {
 
 .btn-continue {
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   background-color: #6699CC;
   border-radius: 5px;
