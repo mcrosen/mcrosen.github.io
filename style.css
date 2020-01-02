@@ -39,14 +39,20 @@ html,body {
 }
 
 #map {
+  width: 75%;
+  height: 60%;
+  margin: 0 auto;
   position: absolute;
-  display: block;
+  margin-left: 50px;
 }
+
 
 #artboard {
   width: 80%;
   border: 10px solid #eaf1f8;
   border-radius: 5px;
+  position: relative;
+  pointer-events: none;
 }
 
 .btn-personalize {
@@ -67,6 +73,7 @@ html,body {
   padding-top: 20px;
   width: 100%;
   text-align: center;
+  overflow-x: hidden;
 }
 
   .name-1-box, .name-2-box, .date-box{
@@ -80,23 +87,28 @@ html,body {
 
   .name-1-box input, .name-2-box input, .date-box input, .location-box input{
     width: 90%;
-    height: 50px;
+    height: 50%;
     border-radius: 5px;
     border: white;
     font-size: 18px;
     margin-top: 10px;
+    padding-left: 5%;
   }
 
 label {
   padding-left: 12px;
   font-family: sans-serif;
+  padding-top: 5px;
 }
 
 .poster-size {
-  height: 50px;
   width: 90%;
-  border: none;
+  height: 50%;
+  border-radius: 5px;
+  border: white;
+  font-size: 18px;
   margin-top: 10px;
+  padding-left: 5%;
 }
 
 #btn-generate {
