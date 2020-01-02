@@ -11,6 +11,7 @@ html,body {
 .wrapper-1, .wrapper-2 {
   width: 100%;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .location-box {
