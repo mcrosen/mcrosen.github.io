@@ -13,30 +13,27 @@ html,body {
   text-align: center;
 }
 
+.location-box {
+  height: 90px;
+  background-color: #eaf1f8;
+  width: 86%;
+  height: 60px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 
 
 #logo {
   width: 60%;
   display: inline-block;
-}
-
-.location-box {
-  background-color: #eaf1f8;
-  border: 10px solid #eaf1f8;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 80%;
-  overflow: hidden;
-  text-align: center;
+  margin-top: 10px;
 }
 
 #autocomplete {
   display: inline-block;
-  height: 90%;
-  width: 95%;
+  height: 60%;
+  width: 90%;
   border: 1px solid white;
   border-radius: 5px;
 }
@@ -72,7 +69,7 @@ html,body {
   text-align: center;
 }
 
-  .name-1-box, .name-2-box, .date-box, .location-box {
+  .name-1-box, .name-2-box, .date-box{
     height: 90px;
     background-color: #eaf1f8;
     width: 90%;
@@ -130,3 +127,24 @@ label {
 /* Input Boxes */
 
 /* Second Page */
+
+/* Third Page */
+#artboard-pg3 {
+  width: 80%;
+  border: 10px solid #eaf1f8;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.btn-continue {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #6699CC;
+  border-radius: 5px;
+  border: 1px solid #6699CC;
+  width: 84%;
+  height: 50px;
+  margin-top: 20px;
+}
+/* Third Page */
