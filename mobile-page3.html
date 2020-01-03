@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="style.css">
+  <script src="html2canvas.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg&libraries=places"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsrP71hSf7K-t8yD33R9ElBFLgiwHZItg"></script>
   <script type="text/javascript" src="main.js"></script>
@@ -26,10 +28,6 @@
           <div class="input-box">
             <form class="" action="index.html" method="post">
 
-          <!--    <div class="location-box">
-                <!--<label id="autocomplete-label" for="location">Engagement Location:</label><br>-->
-                <!--<input id="autocomplete" type="text" name="location" placeholder="Choose your location" value="">
-              </div>-->
 
             <div class="hidden-mobile">
 
@@ -71,16 +69,13 @@
 
         <div class="wrapper-2">
 
-          <!-- Map -->
-
-            <div id="map"></div>
-
-          <!-- Map -->
-
           <!-- Image Box -->
           <div class="img-box">
+            <div id="heart-icon" class="draggable">
+              <img src="images/heart-icon.png" alt="">
+            </div>
+            <div id="map"></div>
             <img id="artboard"  src="images/1x/Artboard 1.png" alt="">
-            <div id="heart-icon" class="draggable"></div>
           </div>
           <!-- Image Box -->
 
@@ -98,10 +93,15 @@
           <div id="date"></div>
           <!-- Date -->
 
-          <button onclick="window.location.href='/mobile-page2.html'" class="btn-personalize" type="button" name="button">CONTINUE</button>
+          <button onclick="window.location.href='/mobile-page2.html'" class="btn-personalize" type="button" name="button">PERSONALIZE</button>
         </div>
 
 
+<!--<script>
+html2canvas(document.querySelector(".location-box")).then(canvas => {
+  document.body.appendChild(canvas)
+});
+</script>-->
 
       <!--</div>
     </div>-->
