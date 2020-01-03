@@ -11,14 +11,12 @@ html,body {
 .wrapper-1, .wrapper-2 {
   width: 100%;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .location-box {
   height: 90px;
   background-color: #eaf1f8;
-  border: 10px solid #eaf1f8;
-  width: 80%;
+  width: 86%;
   height: 60px;
   border-radius: 5px;
   margin: 0 auto;
@@ -34,11 +32,10 @@ html,body {
 
 #autocomplete {
   display: inline-block;
-  height: 70%;
+  height: 60%;
   width: 90%;
   border: 1px solid white;
   border-radius: 5px;
-  top: 50% 50%;
 }
 
 #map {
@@ -58,17 +55,29 @@ html,body {
   pointer-events: none;
 }
 
+#heart-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#heart-icon img {
+  height: 5%;
+}
+
+
 .btn-personalize {
   background-color: #58aed1;
-  width: 80%;
+  width: 85%;
   display: inline-block;
   height: 40px;
   margin-top: 10px;
   margin-bottom: 50px;
-  border: 10px solid #58aed1;
+  border: 1px solid #58aed1;
   border-radius: 5px;
-  color: white;
-  font-weight: bold;
+  cursor:
 }
 
 /* Main Page */
@@ -88,7 +97,6 @@ html,body {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 20px;
-    font-weight: bold;
   }
 
   .name-1-box input, .name-2-box input, .date-box input, .location-box input{
@@ -156,7 +164,7 @@ label {
 
 .btn-continue {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   background-color: #6699CC;
   border-radius: 5px;

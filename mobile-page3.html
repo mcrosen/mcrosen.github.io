@@ -22,19 +22,64 @@
       <div class="row">-->
         <div class="wrapper-1">
           <img id="logo" src="images/logo.png" alt="">
-        </div>
+          <!-- Input Box -->
+          <div class="input-box">
+            <form class="" action="index.html" method="post">
 
+          <!--    <div class="location-box">
+                <!--<label id="autocomplete-label" for="location">Engagement Location:</label><br>-->
+                <!--<input id="autocomplete" type="text" name="location" placeholder="Choose your location" value="">
+              </div>-->
+
+            <div class="hidden-mobile">
+
+              <div class="name-1-box">
+                <label for="name-1">First Name:</label><br>
+                <input type="text" name="name-1" id="name_1_id" placeholder="Jack" value="">
+              </div>
+
+              <div class="name-2-box">
+                <label for="name-2">Second Name:</label><br>
+                <input type="text" name="name-2" id="name_2_id" placeholder="Jill" value="">
+              </div>
+
+              <div class="date-box">
+                <label for="date">Engaged In:</label><br>
+                <input type="text" name="date" placeholder="New York" value="">
+              </div>
+
+              <div class="date-box">
+                <label for="date">Engagement Date:</label><br>
+                <input type="date" name="date" value="">
+              </div>
+
+              <div class="date-box">
+                <label for="size">Poster Size:</label><br>
+                  <select class="poster-size" name="size">
+                    <option value="8">8 x 10 inch</option>
+                    <option value="12">12 x 18 inch</option>
+                    <option value="16">16 x 24 inch</option>
+                  </select>
+              </div>
+
+              <button id="btn-generate" type="button" name="button" onclick="updater()"><strong>GENERATE</strong></button>
+              <button id="btn-checkout" type="button" name="button" onclick=""><strong>CHECKOUT</strong></button>
+            </form>
+          </div>
+          </div>
+        </div>
 
         <div class="wrapper-2">
 
           <!-- Map -->
 
-          <div id="map"></div>
+            <div id="map"></div>
+
           <!-- Map -->
 
           <!-- Image Box -->
-          <div class="img-box-pg3">
-            <img id="artboard-pg3"  src="images/1x/Artboard 1.png" alt="">
+          <div class="img-box">
+            <img id="artboard"  src="images/1x/Artboard 1.png" alt="">
             <div id="heart-icon" class="draggable"></div>
           </div>
           <!-- Image Box -->
@@ -53,7 +98,7 @@
           <div id="date"></div>
           <!-- Date -->
 
-          <button onclick="window.location.href='/mobile-page2.html'" class="btn-continue" type="button" name="button">CONTINUE</button>
+          <button onclick="window.location.href='/mobile-page2.html'" class="btn-personalize" type="button" name="button">CONTINUE</button>
         </div>
 
 
