@@ -75,7 +75,7 @@
 
           <!-- Image Box -->
           <div class="img-box">
-            <div id="heart-icon" class="draggable">
+            <div class="heart-icon" id="draggable">
               <img src="images/heart-icon.png" alt="">
             </div>
             <div id="map"></div>
@@ -110,5 +110,9 @@ html2canvas(document.querySelector(".location-box")).then(canvas => {
       <!--</div>
     </div>-->
   </main>
-
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
 </body>

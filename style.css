@@ -1,15 +1,15 @@
-html,body {
+html, body {
   background-color: #414654;
-  width: 100%;
+  margin:0px;
+  padding:0px;
 }
-
 .hidden-mobile {
   display: none;
 }
 
 /* Main Page */
 .wrapper-1, .wrapper-2 {
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
@@ -65,14 +65,15 @@ html,body {
   pointer-events: none;
 }
 
-#heart-icon {
+.heart-icon {
   position: absolute;
   width: 5%;
   height: 5%;
   z-index: 1;
+  cursor: grab;
 }
 
-#heart-icon img {
+.heart-icon img {
   height: 100%;
 }
 
@@ -163,6 +164,10 @@ label {
 
 /* Second Page */
 
+.name-box{
+	padding-top:10px;
+}
+
 /* Third Page */
 #artboard-pg3 {
   width: 80%;
@@ -186,4 +191,35 @@ label {
 
 @media only screen and (min-width: 992px) {
 
+}
+@media only screen and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 600px) {
+.wrapper-1, .wrapper-2 {
+  width: 96%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.location-box {
+  width: 92%;
+}
+#autocomplete {
+    width: 92%;
+}
+#map {
+  width: 92%;
+}
+#artboard {
+  width: 92%;
+}
+.btn-personalize {
+	width: 98%;
+}
+.name-box{
+	width: 96%;
+}
+#btn-generate {
+    width: 96%;
+}
 }
